@@ -17,7 +17,7 @@ type Articles[] Article
 
 func allArticles(w http.ResponseWriter, r *http.Request){
 	articles := Articles{
-		Article{Title:"Test Title", Desc: "Test Description23", Content: "Hello World"},
+		Article{Title:"Test Title", Desc: "Test Description1", Content: "Hello World"},
 	}
 
 	fmt.Println("Endpoint Hi: All Articles Endpoint")

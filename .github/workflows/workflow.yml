@@ -31,3 +31,11 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+        
+    # Deploy to Heroku
+    - name: Deploy to Heroku
+      env:
+        HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
+        HEROKU_APP_NAME: "simple-rest-api-go"
+      if: github.ref == 'refs/heads/master' && job.status == 'success'
+      run: git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/master:master

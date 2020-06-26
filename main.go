@@ -34,7 +34,13 @@ func handleRequests(){
 	log.Fatal(http.ListenAndServe(":" + getPort(), nil))
 }
 
-func getPort() string {	port := os.Getenv("PORT") if len(port) == 0 { return "8081"	} return port}
+func getPort() string {
+	port := os.Getenv("PORT")
+	if len(port) == 0 {
+		return "8081"
+	}
+	return port
+}
 
 
 func main(){

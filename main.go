@@ -18,7 +18,7 @@ type Articles[] Article
 
 func allArticles(w http.ResponseWriter, r *http.Request){
 	articles := Articles{
-		Article{Title:"Test Title", Desc: "Test Description1", Content: "Hello World"},
+		Article{Title:"Test Title", Desc: "Test Description1", Content: "Hallo Welt"},
 	}
 
 	fmt.Println("Endpoint Hi: All Articles Endpoint")
@@ -26,7 +26,7 @@ func allArticles(w http.ResponseWriter, r *http.Request){
 }
 
 func homePage(w http.ResponseWriter, r *http.Request){
-	fmt.Fprintf(w, "HomePage Endpoint Hit")
+	fmt.Fprintf(w, "[HomePage Endpoint Hit <3 <3 <3]")
 }
 
 func handleRequests(){

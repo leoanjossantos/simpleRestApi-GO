@@ -26,7 +26,7 @@ func allArticles(w http.ResponseWriter, r *http.Request){
 }
 
 func homePage(w http.ResponseWriter, r *http.Request){
-	fmt.Fprintf(w, "[HomePage Endpoint Hit <3 <3 <3]")
+	fmt.Fprintf(w, "HomePage Endpoint Hit <3 <3 <3")
 }
 
 func handleRequests(){

@@ -1,2 +1,2 @@
 module simpleRestApi-GO
-go 1.14.4
+go 1.14
